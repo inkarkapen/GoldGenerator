@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Add My Quote</title>
+    </head>
+    <body>
+        <form action = '/addquote' method = "POST">
+            <br>Your name: <input type = 'text' name = "name"></br>
+            <br>Your quote: <input type = 'text' name = "quote"></br>
+            <br><input type = 'submit' value = "Add my quote"></br>
+        </form>
+        <% if(typeof(errors) != 'undefined') { %>
+            <% for(var x in errors) { %>
+                <h3><%= errors[x].message %></h3>
+            <% } %>
+        <% } %>
+    </body>
+</html>

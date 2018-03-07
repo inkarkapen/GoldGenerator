@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>All Quotes</title>
+    </head>
+    <body>
+        <a href = '/'>Create New Quote</a>
+        <% for (var i = 0; i<quotes.length; i++) { %>
+            <p>Name: <%= quotes[i].name %>, quote: <%= quotes[i].quote %>, time: <%=quotes[i].createdAt %></p>
+            <a href = 'quotes/<%=quotes[i]._id%>'>Display info</a>
+            <a href = 'quotes/edit/<%=quotes[i]._id%>'>Edit info</a>
+            <a href = 'quotes/destroy/<%=quotes[i]._id%>'>Destroy quote</a>
+        <% } %>
+    </body>
+</html>
